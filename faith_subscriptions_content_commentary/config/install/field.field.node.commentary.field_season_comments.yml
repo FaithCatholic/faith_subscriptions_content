@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_season_comments
+    - node.type.commentary
+  module:
+    - allowed_formats
+    - field_display_label
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - formatted_text
+  field_display_label:
+    display_label: Comments
+id: node.commentary.field_season_comments
+field_name: field_season_comments
+entity_type: node
+bundle: commentary
+label: 'Season comments'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

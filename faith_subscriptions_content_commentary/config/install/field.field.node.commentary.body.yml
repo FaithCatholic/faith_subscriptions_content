@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.commentary
+  module:
+    - allowed_formats
+    - field_display_label
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - unrestricted_text
+  field_display_label:
+    display_label: Commentary
+id: node.commentary.body
+field_name: body
+entity_type: node
+bundle: commentary
+label: 'Commentary body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

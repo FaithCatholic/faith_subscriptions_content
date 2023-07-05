@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liturgy_of_the_word
+    - node.type.commentary
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - formatted_text
+id: node.commentary.field_liturgy_of_the_word
+field_name: field_liturgy_of_the_word
+entity_type: node
+bundle: commentary
+label: 'Liturgy of the Word'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

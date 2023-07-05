@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.homily.body
+    - field.field.node.homily.field_colors
+    - field.field.node.homily.field_date
+    - field.field.node.homily.field_focus
+    - field.field.node.homily.field_holy_day
+    - field.field.node.homily.field_lectionaries
+    - field.field.node.homily.field_lectionary_comments
+    - field.field.node.homily.field_season
+    - field.field.node.homily.field_season_comments
+    - node.type.homily
+  module:
+    - smart_trim
+    - user
+id: node.homily.teaser
+targetEntityType: node
+bundle: homily
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 300
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+        token_browser: ''
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_colors: true
+  field_date: true
+  field_focus: true
+  field_holy_day: true
+  field_lectionaries: true
+  field_lectionary_comments: true
+  field_season: true
+  field_season_comments: true
+  links: true

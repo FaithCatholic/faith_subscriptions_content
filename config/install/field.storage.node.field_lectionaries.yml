@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - faith_subscriptions_lectionary
+    - node
+id: node.field_lectionaries
+field_name: field_lectionaries
+entity_type: node
+type: entity_reference
+settings:
+  target_type: lectionary
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

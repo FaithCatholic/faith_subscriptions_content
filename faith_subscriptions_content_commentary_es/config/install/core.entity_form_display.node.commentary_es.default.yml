@@ -1,0 +1,237 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.commentary_es.body
+    - field.field.node.commentary_es.field_closing_prayer
+    - field.field.node.commentary_es.field_colors
+    - field.field.node.commentary_es.field_date
+    - field.field.node.commentary_es.field_focus
+    - field.field.node.commentary_es.field_holy_day
+    - field.field.node.commentary_es.field_lectionaries
+    - field.field.node.commentary_es.field_lectionary_comments
+    - field.field.node.commentary_es.field_liturgy_of_the_word
+    - field.field.node.commentary_es.field_opening_prayer
+    - field.field.node.commentary_es.field_season
+    - field.field.node.commentary_es.field_season_comments
+    - field.field.node.commentary_es.field_special_prayer
+    - field.field.node.commentary_es.field_universal_prayer
+    - node.type.commentary_es
+  module:
+    - allowed_formats
+    - datetime
+    - inline_entity_form
+    - path
+    - text
+id: node.commentary_es.default
+targetEntityType: node
+bundle: commentary_es
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 8
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 2
+      placeholder: 'Type a commentary here...'
+      show_summary: true
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  created:
+    type: datetime_timestamp
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_closing_prayer:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type a closing prayer here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_colors:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 0
+      size: 30
+      placeholder: 'Type a color...'
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_focus:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type a focus here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_holy_day:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Type a holy day here...'
+    third_party_settings: {  }
+  field_lectionaries:
+    type: inline_entity_form_complex
+    weight: 10
+    region: content
+    settings:
+      form_mode: default
+      override_labels: true
+      label_singular: lectionary
+      label_plural: lectionaries
+      auto_open: true
+      allow_new: true
+      allow_existing: true
+      allow_edit: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      hide_fieldset: false
+      hide_title: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: keep
+      config_labels_button: simple_label
+      labels:
+        label_singular_lectionary: ''
+        label_plural_lectionary: ''
+      add_existing_widget: autocomplete
+      auto_open_edit_form: 0
+    third_party_settings: {  }
+  field_lectionary_comments:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type a lectionary comments here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_liturgy_of_the_word:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type a liturgy here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_opening_prayer:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type an opening prayer here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_season:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Type a season here...'
+    third_party_settings: {  }
+  field_season_comments:
+    type: text_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type season comments here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_special_prayer:
+    type: text_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type a special prayer here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  field_universal_prayer:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Type a universal prayer here...'
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
+  path:
+    type: path
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 19
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Type a title here...'
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  sticky: true

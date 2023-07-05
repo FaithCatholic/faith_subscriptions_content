@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_opening_prayer
+    - node.type.commentary
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - formatted_text
+id: node.commentary.field_opening_prayer
+field_name: field_opening_prayer
+entity_type: node
+bundle: commentary
+label: 'Opening prayer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

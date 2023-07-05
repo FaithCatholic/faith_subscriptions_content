@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.growgo.body
+    - field.field.node.growgo.field_date
+    - node.type.growgo
+  module:
+    - datetime
+    - user
+id: node.growgo.default
+targetEntityType: node
+bundle: growgo
+mode: default
+content:
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  links: true

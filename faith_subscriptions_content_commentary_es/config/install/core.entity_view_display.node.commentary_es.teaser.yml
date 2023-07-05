@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.commentary_es.body
+    - field.field.node.commentary_es.field_closing_prayer
+    - field.field.node.commentary_es.field_colors
+    - field.field.node.commentary_es.field_date
+    - field.field.node.commentary_es.field_focus
+    - field.field.node.commentary_es.field_holy_day
+    - field.field.node.commentary_es.field_lectionaries
+    - field.field.node.commentary_es.field_lectionary_comments
+    - field.field.node.commentary_es.field_liturgy_of_the_word
+    - field.field.node.commentary_es.field_opening_prayer
+    - field.field.node.commentary_es.field_season
+    - field.field.node.commentary_es.field_season_comments
+    - field.field.node.commentary_es.field_special_prayer
+    - field.field.node.commentary_es.field_universal_prayer
+    - node.type.commentary_es
+  module:
+    - text
+    - user
+id: node.commentary_es.teaser
+targetEntityType: node
+bundle: commentary_es
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_closing_prayer: true
+  field_colors: true
+  field_date: true
+  field_focus: true
+  field_holy_day: true
+  field_lectionaries: true
+  field_lectionary_comments: true
+  field_liturgy_of_the_word: true
+  field_opening_prayer: true
+  field_season: true
+  field_season_comments: true
+  field_special_prayer: true
+  field_universal_prayer: true

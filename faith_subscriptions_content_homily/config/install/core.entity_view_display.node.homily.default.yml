@@ -1,0 +1,114 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.homily.body
+    - field.field.node.homily.field_colors
+    - field.field.node.homily.field_date
+    - field.field.node.homily.field_focus
+    - field.field.node.homily.field_holy_day
+    - field.field.node.homily.field_lectionaries
+    - field.field.node.homily.field_lectionary_comments
+    - field.field.node.homily.field_season
+    - field.field.node.homily.field_season_comments
+    - node.type.homily
+  module:
+    - datetime
+    - smart_trim
+    - text
+    - user
+id: node.homily.default
+targetEntityType: node
+bundle: homily
+mode: default
+content:
+  body:
+    type: smart_trim
+    label: above
+    settings:
+      trim_length: 300
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
+        token_browser: ''
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_colors:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_focus:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_holy_day:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_lectionaries:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_lectionary_comments:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_season:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_season_comments:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden:
+  links: true

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.formatted_text
+  module:
+    - ckeditor5
+format: formatted_text
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - bold
+      - italic
+      - link
+  plugins: {  }
+image_upload: {  }

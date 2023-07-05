@@ -1,0 +1,7 @@
+name: Faith Subscriptions Content Homily
+type: module
+description: Provides additional functionality for the site.
+package: Faith subscriptions content
+core_version_requirement: ^9 || ^10
+dependencies:
+  - faithcatholic:faith_subscriptions_content
