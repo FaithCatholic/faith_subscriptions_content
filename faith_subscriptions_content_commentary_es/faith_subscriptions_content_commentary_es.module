@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function faith_subscriptions_content_commentary_es_theme($existing, $type, $theme, $path) {
+  return [
+    'node__commentary_es' => [
+      'template' => 'node--commentary--es',
+      'base hook' => 'node',
+    ],
+  ];
+}

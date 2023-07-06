@@ -12,6 +12,7 @@ dependencies:
   - drupal:field_display_label
   - drupal:inline_entity_form
   - drupal:menu_ui
+  - drupal:node
   - drupal:path
   - drupal:smart_trim
   - drupal:taxonomy
@@ -19,3 +20,4 @@ dependencies:
   - drupal:token
   - faithcatholic:faith_subscriptions_lectionary
   - faithcatholic:faith_subscriptions_media
+  - faithcatholic:faith_subscriptions_structure_sync

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function faith_subscriptions_content_homily_theme($existing, $type, $theme, $path) {
+  return [
+    'node__homily' => [
+      'template' => 'node--homily',
+      'base hook' => 'node',
+    ],
+  ];
+}

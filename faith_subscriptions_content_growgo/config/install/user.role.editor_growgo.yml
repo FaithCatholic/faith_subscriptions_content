@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.formatted_text
+    - filter.format.unrestricted_text
+  module:
+    - filter
+id: editor_growgo
+label: 'Grow+Go editor'
+weight: 1
+is_admin: null
+permissions:
+  - 'use text format formatted_text'
+  - 'use text format unrestricted_text'

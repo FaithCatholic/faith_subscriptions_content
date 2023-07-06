@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.formatted_text
+    - filter.format.unrestricted_text
+  module:
+    - filter
+id: editor_commentary_es
+label: 'Commentary (es) editor'
+weight: -4
+is_admin: null
+permissions:
+  - 'use text format formatted_text'
+  - 'use text format unrestricted_text'
